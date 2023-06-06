@@ -1,71 +1,60 @@
-### [coreui-free-angular-admin-template](https://coreui.io/angular/) changelog
+## [1.9.0] - 2022-11-28
+### Updates
+- update to Angular 14
+- update all dependencies to match the Angular 14 version
 
----
+## [1.8.0] - 2022-05-06
+### Updates
+- update to Angular 13
+- update all dependencies to match the Angular 13 version
+- routing, build and configuration issues fixed
 
-#### `4.5.0`
+## [1.7.0] - 2020-12-15
+### Updates
+- update to Angular 11
+- update all dependencies to match Angular 11 version
 
-- chore(dependencies): update to `Angular 16`
-- refactor: remove deprecated ngx-perfect-scrollbar, use `ngx-scrollbar` instead
-- fix: getStyle() add nullish check
-- refactor(toasters): use takeUntilDestroyed() operator
+## [1.6.0] - 2020-03-12
+### Updates
+- update to Angular 9
+- update all dependencies to match Angular 9 version
 
----
+## [1.5.0] - 2018-10-04
+### Changes
+- update to Angular 6
+- added online documentation
 
-#### `4.3.13`
+## [1.4.0] - 2017-08-28
+### Changes for Angular 4
+- added angular-cli
+- update to Angular 4
 
-- docs(LICENSE): add missing license info
-- chore(dependencies): update
+## [v1.3.0] 2017-08-28
+### skipped for sync with Angular 4 version convention
 
----
+## [v1.2.0] 2017-08-28
+### skipped for sync with Angular 4 version convention
 
-#### `4.3.12`
+## [1.1.1] - 2017-03-21
+### Added
+- added "@types/core-js": "0.9.35" in package
 
-- chore(dependencies): update
+## [1.1.0] - 2017-03-01
+### Added
+- fix version numbers in package.json and CSS and JS
 
----
+## [1.0.2] - 2017-02-27
+### Added
+- added upgrade to pro page
+- fixed navbar title
+- changed http://www.creative-tim.com/ with https://www.creative-tim.com/
 
-#### `4.3.11`
+## [1.0.1] - 2017-02-13
+### small fix
+- changes in routes(redirect '' to 'dashboard' + added HashLocationStrategy)
+- changes in documentation
+- changes in sidebar(cleaned li tags + changed z-index)
+- changes in footer(added current date)
 
-- chore(dependencies): update `@angular/*` to version `^15.2.7`
-- standalone components:
-  - chore(dependencies): update `@coreui/angular` to version `~4.4.1`
-  - chore(dependencies): update `@coreui/angular-chartjs` to version `~4.4.1`
-  - chore(dependencies): update `@coreui/icons-angular` to version `~4.4.1`
-- fix(widgets): breakpoints
-
----
-
-#### `4.3.10`
-
-- chore(dependencies): update `@angular/*` to version `^15.2.4`
-- chore(dependencies): update `@coreui/angular` to version `~4.3.17`
-- chore(dependencies): update `@coreui/angular-chartjs` to version `~4.3.17`
-- chore(dependencies): update `@coreui/icons-angular` to version `~4.3.17`
-- chore(dependencies): update `@coreui/icons` to version `^3.0.1`
-- chore(dependencies): update `@coreui/charts` to version `^3.1.1`
-- chore(dependencies): update `@coreui/utils` to version `^2.0.1`
-
-imports update required :boom: :exclamation:
-- from `import {getStyle, ...} from '@coreui/utils/src`
-- to `import  {getStyle, ...} from '@coreui/utils` 
-
----
-
-#### `4.3.9`
-
-- chore: dependencies update
-- fix(widgets): add missing pointBackgroundColor
-
----
-
-#### `4.3.0`
-
-update to:
-- `Angular 15`
-- `TypeScript 4.8`
-- `RxJS 7.5`
-
-refactor: 
-- refactor(AppComponent): change selector to `app-root`
-
----
+## [1.0.0] - 2016-12-14
+### initial Release
