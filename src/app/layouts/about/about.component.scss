@@ -1,0 +1,17 @@
+.mt-3 {
+    margin-top: 1.5rem;
+  }
+  .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .mobileNumber{
+    padding-right:19rem !important;
+    width: 100% !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .marginTopSm{
+        margin-top: 1.5rem;
+    }
+  }

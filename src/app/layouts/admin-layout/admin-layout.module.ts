@@ -16,7 +16,9 @@ import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
-
+import { AboutComponent } from '../about/about.component';
+import { CKEditorModule } from 'ckeditor4-angular';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   imports: [
@@ -24,6 +26,9 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     LbdModule,
+    ReactiveFormsModule,
+    CKEditorModule,
+    NgSelectModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
   ],
   declarations: [
@@ -34,7 +39,8 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
-    UpgradeComponent
+    UpgradeComponent,
+    AboutComponent
   ]
 })
 

@@ -1,0 +1,106 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="row mt-3 mb-3">
+                <div class="col-md-6 col-sm-6">
+                    <label>Email</label>
+                    <input type="email" class="form-control" placeholder="Email" formControlName="email"
+                    autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+                    
+                    <div *ngIf="submitted && f['email'].errors" style="color: red;">
+                        <div *ngIf="f['email'].errors['required']">Email is required</div>
+                        <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+                    </div>
+    
+                    <label class="mt-3">Website</label>
+                    <input type="text" class="form-control" placeholder="web" formControlName="website"
+                    autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f['website'].errors }">
+                    
+                    <div *ngIf="submitted && f['website'].errors" style="color: red;">
+                        <div *ngIf="f['website'].errors['required']">Website is required</div>
+                    </div>
+    
+                    <label class="mt-3">City</label>
+                    <input type="text" class="form-control" placeholder="City" formControlName="city"
+                    autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f['city'].errors }">
+                    
+                    <div *ngIf="submitted && f['city'].errors" style="color: red;">
+                        <div *ngIf="f['city'].errors['required']">City is required</div>
+                    </div>
+    
+                    <label class="mt-3">Mobile Number</label><br>
+                    <input type="text" class="form-control mobileNumber" formControlName="number" (keypress)="numberOnly($event)" 
+                    autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f['number'].errors }" maxlength="10" id="phone"><br>
+                    
+                    <div *ngIf="submitted && f['number'].errors" style="color: red;">
+                        <div *ngIf="f['number'].errors['required']">Number is required</div>
+                    </div>
+    
+                    <label class="mt-3">Total Exp</label>
+                    <input type="text" class="form-control" placeholder="experience in years" formControlName="experience" (keypress)="numberOnly($event)"
+                    autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f['experience'].errors }" maxlength="2">
+                    
+                    <div *ngIf="submitted && f['experience'].errors" style="color: red;">
+                        <div *ngIf="f['experience'].errors['required']">Experience is required</div>
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <label class="marginTopSm">Degree</label>
+                    <input type="text" class="form-control" placeholder="Degree" formControlName="degree"
+                    autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f['degree'].errors }">
+                    
+                    <div *ngIf="submitted && f['degree'].errors" style="color: red;">
+                        <div *ngIf="f['degree'].errors['required']">Degree is required</div>
+                    </div>
+    
+                    <label class="mt-3">Birthday</label>
+                    <input type="date" class="form-control" placeholder="select date" formControlName="DOB" 
+                    autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f['DOB'].errors }">
+                    
+                    <div *ngIf="submitted && f['DOB'].errors" style="color: red;">
+                        <div *ngIf="f['DOB'].errors['required']">DOB is required</div>
+                    </div>
+    
+                    <label class="mt-3">Age</label>
+                    <input type="text" class="form-control" placeholder="Age" formControlName="age" (keypress)="numberOnly($event)"
+                    autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f['age'].errors }" maxlength="2">
+                    
+                    <div *ngIf="submitted && f['age'].errors" style="color: red;">
+                        <div *ngIf="f['age'].errors['required']">Age is required</div>
+                    </div>
+    
+                    <label class="mt-3">Freelance</label>
+                    <!-- <input type="text" class="form-control" placeholder="freelancing" formControlName="freelancer"
+                    autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f['freelancer'].errors }"> -->
+                    <select  class="form-control" [ngClass]="{ 'is-invalid': submitted && f['freelancer'].errors }" 
+                    formControlName="freelancer" (change)="selectFreeLancing($event.target.value)">
+                        <option disabled>Select freelancing</option>
+                        <option>Choose Freelance</option>
+                        <option *ngFor="let free of freelancing">{{free}}</option>
+                    </select>
+                    
+                    <div *ngIf="(submitted && f['freelancer'].errors)" style="color: red;">
+                        <div *ngIf="f['freelancer'].errors['required']">Select Freelancing</div>
+                    </div>
+                    <div *ngIf="freelance" style="color: red;">
+                        Select Freelancing
+                    </div>
+    
+                </div>
+            </div>
+            <ckeditor id="description" name="description" placeholder="Mention about yourself" 
+                formControlName="textarea" [ngClass]="{ 'is-invalid': submitted && f['textarea'].errors }"> 
+            </ckeditor>
+            <!-- <textarea class="form-control mt-3" rows="4" placeholder="Mention about yourself" 
+            formControlName="textarea" [ngClass]="{ 'is-invalid': submitted && f['textarea'].errors }"></textarea> -->
+            <div *ngIf="submitted && f['textarea'].errors" style="color: red;">
+                <div *ngIf="f['textarea'].errors['required']">Textarea is required</div>
+            </div>
+    
+            <div class="">
+                <button type="submit" class="btn btn-primary mt-3 mb-3 center-block">Submit</button>
+            </div>
+        </form>
+        
+    </div>
