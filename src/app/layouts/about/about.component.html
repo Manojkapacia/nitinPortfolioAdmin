@@ -77,7 +77,8 @@
                     formControlName="freelancer" (change)="selectFreeLancing($event.target.value)">
                         <option disabled>Select freelancing</option>
                         <option>Choose Freelance</option>
-                        <option *ngFor="let free of freelancing">{{free}}</option>
+                        <option value="true">Available</option>
+                        <option value="false">Not Available</option>
                     </select>
                     
                     <div *ngIf="(submitted && f['freelancer'].errors)" style="color: red;">
